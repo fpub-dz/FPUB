@@ -32,3 +32,4 @@ create policy "Allow public insert"
 -- Pour consulter les messages reçus : Table Editor -> contact_submissions
 -- dans le tableau de bord Supabase (vous êtes authentifié en tant
 -- qu'administrateur, donc RLS ne vous bloque pas).
+ننننننن
