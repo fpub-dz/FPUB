@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>FPUB — Engineering Excellence Through Human-Centric Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=geist@500,600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ambient shader background -->
+<div id="bg-shader-wrap" aria-hidden="true">
+  <canvas id="shader-canvas"></canvas>
+</div>
+<div id="bg-veil" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="container nav-row">
+    <a href="#top" class="logo">FPUB</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#process" class="active" data-i18n="nav.process">Process</a>
+      <a href="#agency" data-i18n="nav.agency">Agency</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Start Project</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero container" id="hero">
+    <div class="hero-copy">
+      <span class="eyebrow hero-tag" data-i18n="hero.eyebrow">Open 2024</span>
+      <h1 class="display-xl" data-i18n-html="hero.title">Engineering excellence<br>through <span class="italic-accent">human-centric</span><br>design.</h1>
+      <p class="body-lg text-muted" data-i18n="hero.desc">We don't just build interfaces; we architect digital experiences that solve complex business challenges with surgical precision and artistic flair.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="container section-pad" id="process">
+    <div class="process-head">
+      <div>
+        <h2 class="headline-lg" data-i18n="process.heading">Our Process</h2>
+        <p class="body-md text-muted" style="margin-top:12px;max-width:520px;" data-i18n="process.sub">A 6-step clinical framework designed for speed, stability, and measurable impact.</p>
+      </div>
+      <a href="#step-01" class="scroll-cta">
+        <span data-i18n="process.scroll">Scroll to explore</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+
+    <div class="timeline">
+
+      <div class="t-step" id="step-01">
+        <div class="t-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <div class="t-text">
+          <span class="t-index" data-i18n="process.steps.01.index">01. Discovery</span>
+          <h3 class="t-title" data-i18n="process.steps.01.title">Understanding your world</h3>
+          <p class="t-desc" data-i18n="process.steps.01.desc">Deep immersion into your ecosystem. We audit your current tech stack, interview stakeholders, and define the "why" behind the project.</p>
+        </div>
+        <div class="t-media"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="Team reviewing a technical audit on a whiteboard at night"></div>
+      </div>
+
+      <div class="t-step reverse">
+        <div class="t-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg></div>
+        <div class="t-media"><img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=800&auto=format&fit=crop" alt="Hand sketching an architecture diagram on a tablet"></div>
+        <div class="t-text">
+          <span class="t-index" data-i18n="process.steps.02.index">02. Strategy</span>
+          <h3 class="t-title" data-i18n="process.steps.02.title">Mapping the journey</h3>
+          <p class="t-desc" data-i18n="process.steps.02.desc">Mapping the journey. We translate insights into actionable roadmaps, architecture diagrams, and high-fidelity project specifications.</p>
+        </div>
+      </div>
+
+      <div class="t-step">
+        <div class="t-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg></div>
+        <div class="t-text">
+          <span class="t-index" data-i18n="process.steps.03.index">03. Design</span>
+          <h3 class="t-title" data-i18n="process.steps.03.title">Precision-crafted aesthetics</h3>
+          <p class="t-desc" data-i18n="process.steps.03.desc">Precision-crafted aesthetics. We build design systems that are both visually arresting and rigorously functional across all breakpoints.</p>
+        </div>
+        <div class="t-media"><img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800&auto=format&fit=crop" alt="Dark-mode UI design system on a monitor"></div>
+      </div>
+
+      <div class="t-step reverse">
+        <div class="t-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14"/></svg></div>
+        <div class="t-media"><img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop" alt="Developer writing code in a dark editor"></div>
+        <div class="t-text">
+          <span class="t-index" data-i18n="process.steps.04.index">04. Development</span>
+          <h3 class="t-title" data-i18n="process.steps.04.title">Performance-first engineering</h3>
+          <p class="t-desc" data-i18n="process.steps.04.desc">Performance-first engineering. Our developers transform designs into high-speed, secure, and future-proof digital products.</p>
+        </div>
+      </div>
+
+      <div class="t-step">
+        <div class="t-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 19V5M5 19l14-7-14-7"/></svg></div>
+        <div class="t-text">
+          <span class="t-index" data-i18n="process.steps.05.index">05. Launch</span>
+          <h3 class="t-title" data-i18n="process.steps.05.title">A flawless market entry</h3>
+          <p class="t-desc" data-i18n="process.steps.05.desc">The final push. We audit against QA, optimize for SEO, and manage the deployment to ensure a flawless market entry.</p>
+        </div>
+        <div class="t-media"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Glowing upward growth chart on a dark dashboard"></div>
+      </div>
+
+      <div class="t-step reverse">
+        <div class="t-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6M21 7h-6"/></svg></div>
+        <div class="t-media"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Line chart trending upward on a screen"></div>
+        <div class="t-text">
+          <span class="t-index" data-i18n="process.steps.06.index">06. Growth</span>
+          <h3 class="t-title" data-i18n="process.steps.06.title">Continuous optimization</h3>
+          <p class="t-desc" data-i18n="process.steps.06.desc">Iterative optimization. We analyze user data and behavior to continuously refine and grow your platform's impact.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="container section-pad story" id="agency">
+    <h2 class="headline-lg" data-i18n="story.heading">The FPUB Story</h2>
+    <p class="body-md" data-i18n="story.p1">Born in the intersection of art and algorithm, FPUB Agency was founded by a collective of technologists and creatives who felt that agency work had grown stale. We replaced bloated overhead with lean, elite specialists.</p>
+    <p class="body-md" data-i18n="story.p2">Our mission is simple: to build the digital infrastructure of tomorrow, today. We believe in transparency, technical superiority, and the power of bold design to move markets.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">98%</span><span class="stat-label" data-i18n="story.stats.retention">Client Retention</span></div>
+      <div class="stat-box"><span class="stat-num">120+</span><span class="stat-label" data-i18n="story.stats.projects">Projects Launched</span></div>
+      <div class="stat-box"><span class="stat-num">15</span><span class="stat-label" data-i18n="story.stats.awards">Global Awards</span></div>
+      <div class="stat-box"><span class="stat-num">24/7</span><span class="stat-label" data-i18n="story.stats.monitoring">System Monitoring</span></div>
+    </div>
+
+    <div class="pillars">
+      <div class="glass-card pillar">
+        <div class="pillar-icon vision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 data-i18n="pillars.vision.title">Vision</h3>
+        <p data-i18n="pillars.vision.desc">To be the global benchmark for creative technology and digital transformation.</p>
+      </div>
+      <div class="glass-card pillar">
+        <div class="pillar-icon mission"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3 data-i18n="pillars.mission.title">Mission</h3>
+        <p data-i18n="pillars.mission.desc">Empowering visionaries with the technical tools and design expertise required to disrupt limitations.</p>
+      </div>
+      <div class="glass-card pillar">
+        <div class="pillar-icon values"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.5-9.5-9C.6 8.5 2 5 5.3 5c1.9 0 3.4 1 4.7 2.7C11.3 6 12.8 5 14.7 5 18 5 19.4 8.5 21.5 12c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+        <h3 data-i18n="pillars.values.title">Values</h3>
+        <p data-i18n="pillars.values.desc">Radical honesty, ruthless efficiency, and a relentless pursuit of pixel-perfect execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CULTURE ============ -->
+  <section class="container section-pad" style="padding-top:0;">
+    <div class="culture">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" alt="FPUB team collaborating at night in the studio">
+      <div class="culture-copy">
+        <h3 data-i18n="culture.title">Agency Culture</h3>
+        <p data-i18n="culture.desc">We foster an environment of continuous learning and creative freedom. Our studio is more than just a workplace; it's an incubator for the next generation of digital breakthroughs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="container section-pad" id="team">
+    <div style="text-align:center;max-width:560px;margin:0 auto 48px;">
+      <h2 class="headline-lg" data-i18n="team.heading">Meet the Experts</h2>
+      <p class="body-md text-muted" style="margin-top:12px;" data-i18n="team.sub">A multidisciplinary strike team dedicated to your project's success.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop" alt="Portrait of Julian Vane">
+        <div class="team-name">Julian Vane</div>
+        <div class="team-role" data-i18n="team.roles.founder">Founder / CEO</div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop" alt="Portrait of Sarah Chen">
+        <div class="team-name">Sarah Chen</div>
+        <div class="team-role" data-i18n="team.roles.engineer">Lead Software Engineer</div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Portrait of Marcus Thorne">
+        <div class="team-name">Marcus Thorne</div>
+        <div class="team-role" data-i18n="team.roles.strategy">Head of Strategy</div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Portrait of Elena Rossi">
+        <div class="team-name">Elena Rossi</div>
+        <div class="team-role" data-i18n="team.roles.designer">Senior UI Designer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="container section-pad" id="faq">
+    <h2 class="headline-lg" style="text-align:center;margin-bottom:40px;" data-i18n="faq.heading">Frequently Asked Questions</h2>
+    <div style="max-width:760px;margin-inline:auto;">
+      <details class="faq-item" open>
+        <summary><span data-i18n="faq.q1">How long does a typical project take?</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p data-i18n="faq.a1">Most engagements run 6 to 12 weeks from discovery to launch, depending on scope. We share a detailed timeline at the end of the strategy phase.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q2">Do you work with startups or enterprises?</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p data-i18n="faq.a2">Both. Our process scales from lean MVP builds for early-stage startups to multi-market rollouts for established enterprises.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q3">What is your technology stack?</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p data-i18n="faq.a3">We favor Next.js and React on the front end, headless commerce for storefronts, and cloud-native infrastructure tuned to each client's scale.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q4">Will we own the intellectual property?</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p data-i18n="faq.a4">Yes. Upon final payment, full ownership of the code, design files, and assets we create transfers to you.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="container section-pad" id="contact">
+    <div class="contact-grid">
+      <div class="glass-card contact-form-card">
+        <h2 class="headline-lg" data-i18n="contact.heading">Let's build something bold.</h2>
+        <p class="body-md text-muted" style="margin-top:10px;margin-bottom:28px;" data-i18n="contact.sub">Brief us on your vision, and we'll engineer the impact.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name" data-i18n="contact.name">Full Name</label>
+              <input type="text" id="cf-name" name="full_name" required autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="John Doe">
+            </div>
+            <div class="form-field">
+              <label for="cf-email" data-i18n="contact.email">Email Address</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="john@example.com">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-scope" data-i18n="contact.scope">Project Scope</label>
+            <select id="cf-scope" name="project_scope">
+              <option value="full-rebrand" data-i18n="contact.scopeOptions.rebrand">Full Rebrand</option>
+              <option value="web-app" data-i18n="contact.scopeOptions.webapp">Web App / Platform</option>
+              <option value="marketing" data-i18n="contact.scopeOptions.marketing">Marketing Campaign</option>
+              <option value="ai-automation" data-i18n="contact.scopeOptions.ai">AI Automation</option>
+              <option value="other" data-i18n="contact.scopeOptions.other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-message" data-i18n="contact.message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tell us about your goals..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="cf-submit" style="width:100%;padding-block:1em;">
+            <span data-i18n="contact.send">Send Inquiry</span>
+          </button>
+          <p id="cf-status" class="cf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="contact-side">
+        <div class="glass-card">
+          <h3 style="font-size:18px;margin-bottom:18px;" data-i18n="contact.info.heading">Get in Touch</h3>
+          <a class="contact-line" href="mailto:hello@fpub.agency">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+            hello@fpub.agency
+          </a>
+          <a class="contact-line" href="tel:+15551234567">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/></svg>
+            +1 (555) 123-4567
+          </a>
+
+          <div class="label-caps text-muted" style="margin-top:20px;margin-bottom:10px;" data-i18n="contact.info.channels">Direct Channels</div>
+          <div class="channel-grid">
+            <a href="#" class="channel-btn">WhatsApp</a>
+            <a href="#" class="channel-btn">Messenger</a>
+            <a href="#" class="channel-btn">Instagram</a>
+            <a href="#" class="channel-btn">Facebook</a>
+          </div>
+        </div>
+
+        <div class="glass-card location-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div style="font-weight:600;color:#fff;" data-i18n="contact.info.hq">San Francisco HQ</div>
+            <div class="text-muted" style="font-size:13px;">242 Market St, CA 94111</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:16px;">FPUB</div>
+        <p class="body-md text-muted" style="max-width:340px;" data-i18n="footer.tagline">Architecting the future of digital interaction through engineering excellence and luxury design.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4 data-i18n="footer.explore">Explore</h4>
+          <ul>
+            <li><a href="#work" data-i18n="footer.caseStudies">Case Studies</a></li>
+            <li><a href="#agency" data-i18n="footer.ourStory">Our Story</a></li>
+            <li><a href="#services" data-i18n="footer.services">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.careers">Careers</a></li>
+            <li><a href="#" data-i18n="footer.pressKit">Press Kit</a></li>
+            <li><a href="#" data-i18n="footer.blog">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="#" data-i18n="footer.terms">Terms of Service</a></li>
+          <li><a href="#contact" data-i18n="footer.contactUs">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2024 FPUB Agency. All rights reserved.</span>
+      <div class="socials" aria-label="Social links">
+        <a href="#" aria-label="Website"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg></a>
+        <a href="#" aria-label="Portfolio"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 7-6.3-3.9L5.7 20l1.7-7L2 8.2l7.1-.6z"/></svg></a>
+        <a href="#" aria-label="Contact"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</html>
