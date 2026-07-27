@@ -87,7 +87,7 @@
         sending: "Sending...",
         success: "Thanks — your inquiry has been sent. We'll be in touch shortly.",
         error: "Something went wrong. Please try again in a moment.",
-        info: { heading: "Get in Touch", channels: "Direct Channels", hq: "San Francisco HQ" }
+        info: { heading: "Get in Touch", channels: "Direct Channels", channelsLoading: "Loading…", hq: "San Francisco HQ" }
       },
       footer: {
         tagline: "Architecting the future of digital interaction through engineering excellence and luxury design.",
@@ -177,7 +177,7 @@
         sending: "Envoi en cours...",
         success: "Merci — votre demande a bien été envoyée. Nous revenons vers vous rapidement.",
         error: "Un problème est survenu. Merci de réessayer dans un instant.",
-        info: { heading: "Nous contacter", channels: "Canaux directs", hq: "Siège de San Francisco" }
+        info: { heading: "Nous contacter", channels: "Canaux directs", channelsLoading: "Chargement…", hq: "Siège de San Francisco" }
       },
       footer: {
         tagline: "Nous construisons l'avenir de l'interaction numérique, entre excellence d'ingénierie et design haut de gamme.",
@@ -267,7 +267,7 @@
         sending: "جارٍ الإرسال...",
         success: "شكرًا، تم إرسال طلبكم. سنتواصل معكم قريبًا.",
         error: "حدث خطأ ما. من فضلكم أعيدوا المحاولة بعد قليل.",
-        info: { heading: "تواصل معنا", channels: "قنوات مباشرة", hq: "المقر الرئيسي - سان فرانسيسكو" }
+        info: { heading: "تواصل معنا", channels: "قنوات مباشرة", channelsLoading: "جارٍ التحميل...", hq: "المقر الرئيسي - سان فرانسيسكو" }
       },
       footer: {
         tagline: "نبني مستقبل التفاعل الرقمي بمزيج من التميز الهندسي والتصميم الفاخر.",

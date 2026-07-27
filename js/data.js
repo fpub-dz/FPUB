@@ -120,9 +120,32 @@
     }
   }
 
+  /* ---------------- SOCIAL LINKS ---------------- */
+  async function renderSocialLinks() {
+    const el = document.getElementById('social-links');
+    if (!el) return;
+    try {
+      const rows = await sb('social_links?select=*&is_active=eq.true&order=sort_order.asc');
+      if (!rows.length) {
+        el.dataset.state = 'empty';
+        el.innerHTML = '';
+        return;
+      }
+      el.dataset.state = 'ready';
+      el.innerHTML = rows.map(function (row) {
+        return `<a href="${esc(row.url)}" target="_blank" rel="noopener" class="channel-btn">${esc(row.platform)}</a>`;
+      }).join('');
+    } catch (err) {
+      console.error('[FPUB social_links]', err);
+      el.dataset.state = 'error';
+      el.innerHTML = '';
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     renderWork();
     renderServices();
+    renderSocialLinks();
   });
 
   // Re-render text-only fallback messages when the language changes,
