@@ -8,7 +8,7 @@
 (function () {
   const SUPABASE_URL = 'https://lckckfslwvaoyrwtrbhu.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxja2NrZnNsd3Zhb3lyd3RyYmh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUwNjg0NDQsImV4cCI6MjEwMDY0NDQ0NH0.7-a43mAfeEcbCdj_Ur86wTGTqFhMUrzXi8r7qFoUS_o';
-  const TABLE = 'contact_submissions';
+  const TABLE = 'fpub_contact_submissions';
 
   async function submitToSupabase(payload) {
     const res = await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}`, {

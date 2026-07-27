@@ -15,6 +15,22 @@
         title: "Engineering excellence<br>through <span class=\"italic-accent\">human-centric</span><br>design.",
         desc: "We don't just build interfaces; we architect digital experiences that solve complex business challenges with surgical precision and artistic flair."
       },
+      work: {
+        eyebrow: "Case Studies",
+        heading: "Selected Work",
+        sub: "A sample of engagements delivered end-to-end, from strategy to measurable growth.",
+        loading: "Loading case studies\u2026",
+        empty: "No case studies published yet \u2014 add rows to the \u201cfpub_projects\u201d table in Supabase.",
+        error: "Could not load case studies. Run supabase/schema.sql in your project, then reload."
+      },
+      services: {
+        eyebrow: "Our Capabilities",
+        heading: "What We Do",
+        sub: "High-performance marketing, engineering, and creative solutions, precision-tuned for market leaders.",
+        loading: "Loading services\u2026",
+        empty: "No services published yet \u2014 add rows to the \u201cfpub_services\u201d table in Supabase.",
+        error: "Could not load services. Run supabase/schema.sql in your project, then reload."
+      },
       process: {
         heading: "Our Process",
         sub: "A 6-step clinical framework designed for speed, stability, and measurable impact.",
@@ -89,6 +105,22 @@
         title: "Une excellence d'ingénierie<br>au service d'un design <span class=\"italic-accent\">centré sur l'humain</span>.",
         desc: "Nous ne construisons pas de simples interfaces : nous concevons des expériences numériques qui résolvent des enjeux complexes avec précision et sensibilité artistique."
       },
+      work: {
+        eyebrow: "Études de cas",
+        heading: "Réalisations sélectionnées",
+        sub: "Un aperçu de projets menés de bout en bout, de la stratégie à une croissance mesurable.",
+        loading: "Chargement des études de cas…",
+        empty: "Aucune étude de cas publiée pour l'instant — ajoutez des lignes à la table \u00ab fpub_projects \u00bb dans Supabase.",
+        error: "Impossible de charger les études de cas. Exécutez supabase/schema.sql dans votre projet, puis rechargez."
+      },
+      services: {
+        eyebrow: "Nos savoir-faire",
+        heading: "Ce que nous faisons",
+        sub: "Marketing, ingénierie et production créative haute performance, calibrés pour les leaders de marché.",
+        loading: "Chargement des services…",
+        empty: "Aucun service publié pour l'instant — ajoutez des lignes à la table \u00ab fpub_services \u00bb dans Supabase.",
+        error: "Impossible de charger les services. Exécutez supabase/schema.sql dans votre projet, puis rechargez."
+      },
       process: {
         heading: "Notre Process",
         sub: "Un cadre clinique en 6 étapes, pensé pour la rapidité, la stabilité et un impact mesurable.",
@@ -162,6 +194,22 @@
         eyebrow: "منذ 2024",
         title: "هندسة احترافية<br>لتصميم <span class=\"italic-accent\">محوره الإنسان</span>.",
         desc: "نحن لا نبني واجهات فقط، بل نصمّم تجارب رقمية تحلّ تحديات الأعمال المعقّدة بدقة هندسية وحسّ فني عالٍ."
+      },
+      work: {
+        eyebrow: "دراسات الحالة",
+        heading: "أعمال مختارة",
+        sub: "نماذج من مشاريع أنجزناها من الاستراتيجية حتى نتائج نمو ملموسة.",
+        loading: "جارٍ تحميل دراسات الحالة...",
+        empty: "لا توجد دراسات حالة منشورة بعد \u2014 أضف سطورًا إلى جدول \u00abfpub_projects\u00bb في Supabase.",
+        error: "تعذّر تحميل دراسات الحالة. نفّذ supabase/schema.sql في مشروعك ثم أعد التحميل."
+      },
+      services: {
+        eyebrow: "قدراتنا",
+        heading: "ماذا نقدّم",
+        sub: "تسويق وهندسة وإنتاج إبداعي عالي الأداء، مصمّم بدقة لقادة السوق.",
+        loading: "جارٍ تحميل الخدمات...",
+        empty: "لا توجد خدمات منشورة بعد \u2014 أضف سطورًا إلى جدول \u00abfpub_services\u00bb في Supabase.",
+        error: "تعذّر تحميل الخدمات. نفّذ supabase/schema.sql في مشروعك ثم أعد التحميل."
       },
       process: {
         heading: "منهجية عملنا",

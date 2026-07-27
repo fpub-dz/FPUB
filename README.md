@@ -48,20 +48,36 @@ python3 -m http.server 8000
 5. Le site sera publié après quelques minutes à l'adresse :
    `https://<votre-utilisateur>.github.io/fpub-site/`
 
-## Connexion Supabase (formulaire de contact)
+## Connexion Supabase (contact + services + réalisations)
 
-Le formulaire "Get in Touch" envoie chaque soumission dans une table Supabase via l'API REST (PostgREST), avec la clé publique **anon** déjà intégrée dans `js/contact.js` :
+Le site est branché sur Supabase à trois endroits, avec la clé publique **anon** déjà intégrée dans `js/contact.js` et `js/data.js` :
 
 - Projet : `lckckfslwvaoyrwtrbhu`
 - URL : `https://lckckfslwvaoyrwtrbhu.supabase.co`
 
-**Étape obligatoire avant que le formulaire fonctionne** : ouvrez votre tableau de bord Supabase → **SQL Editor** → collez et exécutez le contenu de [`supabase/schema.sql`](./supabase/schema.sql). Ce script :
+**Étape obligatoire avant que le site fonctionne pleinement** : ouvrez votre tableau de bord Supabase → **SQL Editor** → **New query** → collez tout le contenu de [`supabase/schema.sql`](./supabase/schema.sql) → **Run**. Ce script crée trois tables et leurs règles de sécurité (RLS) :
 
-1. crée la table `contact_submissions` (nom, email, périmètre du projet, message, langue, date) ;
-2. active la Row Level Security (RLS) ;
-3. autorise uniquement l'**insertion** depuis le rôle public `anon` — personne ne peut lire, modifier ou supprimer les messages avec la clé publique. Seul vous, depuis le tableau de bord Supabase (Table Editor), pouvez consulter les messages reçus.
+> **Pourquoi le préfixe `fpub_` ?** Votre projet Supabase contient déjà d'autres tables (par ex. `services`, liée à une table `orders` par une clé étrangère, issues d'une autre application). Réutiliser ou vider ces tables aurait risqué de casser cette autre application. Toutes les tables du site FPUB sont donc préfixées `fpub_` pour ne jamais entrer en conflit avec l'existant.
 
-La clé `anon` est faite pour être visible côté client (c'est son rôle) — la sécurité vient de la politique RLS ci-dessus, pas du secret de la clé. Ne mettez jamais la clé `service_role` dans le code du site.
+| Table | Utilisée par | Droit accordé au rôle public `anon` | Contenu |
+|---|---|---|---|
+| `fpub_contact_submissions` | Formulaire "Get in Touch" (`js/contact.js`) | **Insertion uniquement** — personne ne peut lire les messages avec la clé publique | vide au départ, se remplit à chaque envoi du formulaire |
+| `fpub_services` | Section "What We Do" (`js/data.js`) | **Lecture uniquement** | pré-rempli avec ~29 services répartis en 4 catégories (Marketing, Web & E-commerce, Créa, Innovation digitale) |
+| `fpub_projects` | Section "Selected Work" (`js/data.js`) | **Lecture uniquement** | pré-rempli avec 3 études de cas d'exemple |
+
+Le script utilise `truncate` + `insert` sur `fpub_services` et `fpub_projects` : vous pouvez le ré-exécuter à tout moment pour réinitialiser ces données d'exemple.
+
+Pour **modifier ou ajouter vos vrais services et projets**, deux options :
+1. Depuis le tableau de bord Supabase → **Table Editor** → table `fpub_services` ou `fpub_projects` → ajoutez/éditez des lignes directement (aucune connaissance SQL nécessaire).
+2. Ou en ré-exécutant une variante du bloc `insert into ...` du script.
+
+Le site relit ces tables à chaque chargement de page — pas besoin de republier le site après une modification dans Supabase, seulement de rafraîchir la page.
+
+La clé `anon` est faite pour être visible côté client (c'est son rôle) — la sécurité vient des politiques RLS ci-dessus, pas du secret de la clé. Ne mettez jamais la clé `service_role` dans le code du site.
+
+### Canaux de contact (WhatsApp / Messenger / Instagram / Facebook)
+
+Les boutons de la section contact pointent actuellement vers des liens de démonstration (`wa.me/15551234567`, `fpub.agency` sur Instagram/Facebook/Messenger). Remplacez-les par vos vrais comptes dans `index.html` (recherchez `channel-btn`) — sinon ils ouvriront des comptes qui n'existent pas.
 
 ## Multilingue (EN / FR / AR)
 

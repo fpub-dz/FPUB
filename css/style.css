@@ -703,3 +703,71 @@ html[dir="rtl"] .t-step.reverse .t-text{ text-align:left; }
 html[dir="rtl"] .footer-bottom,
 html[dir="rtl"] .process-head,
 html[dir="rtl"] .nav-row{ direction:rtl; }
+
+/* ================= v3 additions: dynamic Work & Services (Supabase) ================= */
+
+.data-status{
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+  padding:32px 0;
+}
+.data-status.err{ color:#ffb4ab; }
+
+/* ---- work ---- */
+.work-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+}
+@media(min-width:768px){
+  .work-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media(min-width:1100px){
+  .work-grid[data-state="ready"]{ grid-template-columns:repeat(3,1fr); }
+}
+.work-card{ padding:0; overflow:hidden; display:flex; flex-direction:column; }
+.work-card-media{ aspect-ratio:16/10; overflow:hidden; }
+.work-card-media img{ width:100%; height:100%; object-fit:cover; }
+.work-card-body{ padding:24px; }
+.work-card-title{ font-family:var(--font-display); font-size:20px; font-weight:600; color:#fff; margin:6px 0 6px; }
+.work-card-role{ font-size:12px; margin-bottom:10px; }
+.work-card-summary{ font-size:14px; color:var(--on-surface-variant); line-height:1.6; margin-bottom:16px; }
+.work-card-results{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.work-card-results > div{ display:flex; flex-direction:column; }
+.work-card-results .stat-label{ font-size:11px; }
+
+/* ---- services ---- */
+.service-group{ margin-bottom:48px; }
+.service-group:last-child{ margin-bottom:0; }
+.service-group-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px;
+}
+.service-group-num{
+  font-family:var(--font-display);
+  font-weight:700;
+  color:var(--primary);
+  font-size:18px;
+}
+.service-item-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+@media(min-width:640px){ .service-item-grid{ grid-template-columns:repeat(3,1fr); } }
+@media(min-width:1000px){ .service-item-grid{ grid-template-columns:repeat(4,1fr); } }
+.service-item{ padding:16px; }
+.service-item-name{ font-size:14px; font-weight:600; color:#fff; margin-bottom:4px; }
+.service-item-desc{ font-size:12px; color:var(--muted); line-height:1.5; }
+
+html[dir="rtl"] .work-card-results,
+html[dir="rtl"] .service-group-head{ direction:rtl; }
