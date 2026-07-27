@@ -142,10 +142,68 @@
     }
   }
 
+  /* ---------------- SETTINGS (contact info, copyright) ---------------- */
+  async function renderSettings() {
+    try {
+      const rows = await sb('settings?select=email,phone,whatsapp_number,address,working_hours,google_maps_url,copyright&limit=1');
+      if (!rows.length) return; // table still empty: keep the placeholder content as-is
+
+      const s = rows[0];
+
+      if (s.email) {
+        const link = document.getElementById('contact-email-link');
+        const text = document.getElementById('contact-email-text');
+        if (link) link.href = 'mailto:' + s.email;
+        if (text) text.textContent = s.email;
+      }
+
+      const phoneNumber = s.phone || s.whatsapp_number;
+      if (phoneNumber) {
+        const link = document.getElementById('contact-phone-link');
+        const text = document.getElementById('contact-phone-text');
+        if (link) link.href = 'tel:' + phoneNumber.replace(/[^\d+]/g, '');
+        if (text) text.textContent = phoneNumber;
+      }
+
+      if (s.address) {
+        const text = document.getElementById('contact-address-text');
+        if (text) text.textContent = s.address;
+      }
+
+      if (s.working_hours) {
+        const text = document.getElementById('contact-hours-text');
+        if (text) text.textContent = s.working_hours;
+      }
+
+      const addressLink = document.getElementById('contact-address-link');
+      if (addressLink) {
+        if (s.google_maps_url) {
+          addressLink.href = s.google_maps_url;
+          addressLink.style.pointerEvents = 'auto';
+        } else {
+          addressLink.removeAttribute('href');
+          addressLink.style.pointerEvents = 'none';
+        }
+      }
+
+      if (s.copyright) {
+        const el = document.getElementById('footer-copyright');
+        if (el) {
+          el.textContent = s.copyright;
+          el.removeAttribute('data-i18n'); // stop the language switcher from overwriting this custom value
+        }
+      }
+    } catch (err) {
+      console.error('[FPUB settings]', err);
+      // silently keep placeholder content — this section is optional
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     renderWork();
     renderServices();
     renderSocialLinks();
+    renderSettings();
   });
 
   // Re-render text-only fallback messages when the language changes,
