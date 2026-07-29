@@ -78,15 +78,20 @@
       contact: {
         heading: "Let's build something bold.",
         sub: "Brief us on your vision, and we'll engineer the impact.",
-        name: "Full Name", namePlaceholder: "John Doe",
+        firstName: "First Name", firstNamePlaceholder: "John",
+        lastName: "Last Name", lastNamePlaceholder: "Doe",
+        phone: "Phone Number", phonePlaceholder: "+213 555 123 456",
         email: "Email Address", emailPlaceholder: "john@example.com",
-        scope: "Project Scope",
-        scopeOptions: { rebrand: "Full Rebrand", webapp: "Web App / Platform", marketing: "Marketing Campaign", ai: "AI Automation", other: "Other" },
-        message: "Message", messagePlaceholder: "Tell us about your goals...",
-        send: "Send Inquiry",
+        send: "Send",
         sending: "Sending...",
-        success: "Thanks — your inquiry has been sent. We'll be in touch shortly.",
+        success: "Thanks — we've received your request.",
         error: "Something went wrong. Please try again in a moment.",
+        messageTemplate: "Hello, my name is {name}. Phone: {phone}. Email: {email}. I would like to know more about your services.",
+        channelPicker: {
+          heading: "How would you like to send it?",
+          whatsapp: "WhatsApp", messenger: "Messenger", instagram: "Instagram", email: "Email", phone: "Call",
+          copied: "Message copied — paste it once the chat opens."
+        },
         info: { heading: "Get in Touch", channels: "Direct Channels", channelsLoading: "Loading…", hq: "Headquarters" }
       },
       footer: {
@@ -168,15 +173,20 @@
       contact: {
         heading: "Construisons quelque chose d'audacieux.",
         sub: "Présentez-nous votre vision, nous en ferons un impact concret.",
-        name: "Nom complet", namePlaceholder: "Jean Dupont",
+        firstName: "Prénom", firstNamePlaceholder: "Jean",
+        lastName: "Nom", lastNamePlaceholder: "Dupont",
+        phone: "Numéro de téléphone", phonePlaceholder: "+213 555 123 456",
         email: "Adresse e-mail", emailPlaceholder: "jean@exemple.com",
-        scope: "Périmètre du projet",
-        scopeOptions: { rebrand: "Refonte complète de marque", webapp: "Application / plateforme web", marketing: "Campagne marketing", ai: "Automatisation IA", other: "Autre" },
-        message: "Message", messagePlaceholder: "Parlez-nous de vos objectifs...",
-        send: "Envoyer la demande",
+        send: "Envoyer",
         sending: "Envoi en cours...",
-        success: "Merci — votre demande a bien été envoyée. Nous revenons vers vous rapidement.",
+        success: "Merci — votre demande a bien été reçue.",
         error: "Un problème est survenu. Merci de réessayer dans un instant.",
+        messageTemplate: "Bonjour, je m'appelle {name}. Téléphone : {phone}. E-mail : {email}. Je souhaite en savoir plus sur vos services.",
+        channelPicker: {
+          heading: "Comment souhaitez-vous l'envoyer ?",
+          whatsapp: "WhatsApp", messenger: "Messenger", instagram: "Instagram", email: "E-mail", phone: "Appel",
+          copied: "Message copié — collez-le une fois la conversation ouverte."
+        },
         info: { heading: "Nous contacter", channels: "Canaux directs", channelsLoading: "Chargement…", hq: "Notre siège" }
       },
       footer: {
@@ -258,15 +268,20 @@
       contact: {
         heading: "لنبنِ شيئًا جريئًا معًا.",
         sub: "شاركونا رؤيتكم، ونحن نتكفّل بهندسة الأثر.",
-        name: "الاسم الكامل", namePlaceholder: "أحمد بن علي",
+        firstName: "الاسم", firstNamePlaceholder: "أحمد",
+        lastName: "اللقب", lastNamePlaceholder: "بن علي",
+        phone: "رقم الهاتف", phonePlaceholder: "+213 555 123 456",
         email: "البريد الإلكتروني", emailPlaceholder: "ahmed@example.com",
-        scope: "نطاق المشروع",
-        scopeOptions: { rebrand: "إعادة تصميم الهوية بالكامل", webapp: "تطبيق / منصة ويب", marketing: "حملة تسويقية", ai: "أتمتة بالذكاء الاصطناعي", other: "آخر" },
-        message: "الرسالة", messagePlaceholder: "أخبرونا عن أهدافكم...",
-        send: "أرسل الطلب",
+        send: "إرسال",
         sending: "جارٍ الإرسال...",
-        success: "شكرًا، تم إرسال طلبكم. سنتواصل معكم قريبًا.",
+        success: "شكرًا، تم استلام طلبكم.",
         error: "حدث خطأ ما. من فضلكم أعيدوا المحاولة بعد قليل.",
+        messageTemplate: "مرحبًا، اسمي {name}. الهاتف: {phone}. البريد الإلكتروني: {email}. أرغب في معرفة المزيد عن خدماتكم.",
+        channelPicker: {
+          heading: "كيف تحب ترسل طلبك؟",
+          whatsapp: "واتساب", messenger: "ماسنجر", instagram: "انستغرام", email: "بريد إلكتروني", phone: "اتصال",
+          copied: "تم نسخ الرسالة — الصقها بعد فتح المحادثة."
+        },
         info: { heading: "تواصل معنا", channels: "قنوات مباشرة", channelsLoading: "جارٍ التحميل...", hq: "مقرنا الرئيسي" }
       },
       footer: {

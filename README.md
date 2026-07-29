@@ -77,7 +77,21 @@ La clé `anon` est faite pour être visible côté client (c'est son rôle) — 
 
 ### Canaux de contact (WhatsApp / Messenger / Instagram / Facebook)
 
-Les boutons de la section contact pointent actuellement vers des liens de démonstration (`wa.me/15551234567`, `fpub.agency` sur Instagram/Facebook/Messenger). Remplacez-les par vos vrais comptes dans `index.html` (recherchez `channel-btn`) — sinon ils ouvriront des comptes qui n'existent pas.
+Depuis la dernière mise à jour, le formulaire "Get in Touch" fonctionne en deux temps :
+
+1. Le visiteur remplit **Prénom, Nom, Téléphone, E-mail** puis clique sur **Envoyer**.
+2. Un panneau apparaît avec 5 choix : **WhatsApp, Messenger, Instagram, E-mail, Appel**. Quel que soit le choix :
+   - la demande est enregistrée dans `fpub_contact_submissions` (avec le canal choisi dans la colonne `channel`) ;
+   - le visiteur est redirigé vers ce canal avec un message pré-rempli construit automatiquement (nom, téléphone, e-mail) — voir la clé `contact.messageTemplate` dans `js/i18n.js` pour modifier ce texte.
+
+Les numéros/liens réels utilisés pour la redirection sont lus en direct depuis Supabase (`settings.whatsapp_number`, `settings.email`, `settings.phone`, et les entrées Instagram/Facebook de `social_links`) — donc pas besoin de toucher au code si vous changez ces informations dans le tableau de bord.
+
+**Limites techniques à connaître** :
+- WhatsApp et l'e-mail supportent un message pré-rempli (l'utilisateur n'a plus qu'à cliquer "Envoyer" dans l'app).
+- Messenger et Instagram ne permettent pas de pré-remplir un message via un simple lien web (restriction des plateformes) : le site copie donc le message dans le presse-papiers et ouvre la page, pour que l'utilisateur le colle lui-même.
+- "Appel" ouvre directement le clavier de composition (`tel:`) sur mobile.
+
+Avant d'exécuter le nouveau script SQL, exécutez [`supabase/contact_form_v2.sql`](./supabase/contact_form_v2.sql) une fois : il ajoute les colonnes `phone` et `channel` à `fpub_contact_submissions` sans toucher aux demandes déjà enregistrées.
 
 ## Multilingue (EN / FR / AR)
 

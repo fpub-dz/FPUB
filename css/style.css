@@ -771,3 +771,46 @@ html[dir="rtl"] .nav-row{ direction:rtl; }
 
 html[dir="rtl"] .work-card-results,
 html[dir="rtl"] .service-group-head{ direction:rtl; }
+
+/* ================= v4: channel picker after Send ================= */
+.channel-picker{
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.1);
+  animation:fadeIn .25s ease-out;
+}
+@keyframes fadeIn{
+  from{ opacity:0; transform:translateY(6px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+.channel-picker-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+@media(min-width:480px){
+  .channel-picker-grid{ grid-template-columns:repeat(3,1fr); }
+}
+.channel-pick-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:16px 10px;
+  border-radius:var(--radius-md);
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.02);
+  color:var(--on-surface);
+  font-family:var(--font-label);
+  font-size:12px;
+  font-weight:600;
+  transition:border-color .2s, background .2s, color .2s, transform .15s;
+}
+.channel-pick-btn:hover{
+  border-color:var(--primary-solid);
+  color:var(--primary);
+  background:rgba(164,208,7,.06);
+  transform:translateY(-2px);
+}
+.channel-pick-btn:disabled{ opacity:.5; pointer-events:none; }
