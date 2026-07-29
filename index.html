@@ -398,10 +398,30 @@
   </div>
 </footer>
 
+<!-- ============ FLOATING ACTION BUTTONS ============ -->
+<div class="fab-stack" aria-label="Quick actions">
+  <div class="fab-chat-wrap">
+    <div id="fab-chat-menu" class="fab-menu" role="menu" hidden>
+      <div class="label-caps text-muted" style="padding:14px 14px 6px;" data-i18n="fab.chatHeading">Chat with us</div>
+      <div id="fab-chat-list" class="fab-menu-list">
+        <p class="data-status" style="padding:10px 14px;" data-i18n="contact.info.channelsLoading">Loading…</p>
+      </div>
+    </div>
+    <button type="button" id="fab-chat-btn" class="fab-btn" aria-haspopup="true" aria-expanded="false" data-i18n-aria-label="fab.chatAria" aria-label="Chat with us">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-9.5 8.4A9 9 0 013 12a8.4 8.4 0 018.4-8.4A8.5 8.5 0 0121 11.5z"/><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/></svg>
+    </button>
+  </div>
+
+  <a href="#contact" id="fab-form-btn" class="fab-btn" data-i18n-aria-label="fab.formAria" aria-label="Jump to the contact form">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+</div>
+
 <script src="js/main.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/data.js"></script>
+<script src="js/fab.js"></script>
 
 </body>
 </html>

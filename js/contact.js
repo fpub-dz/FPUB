@@ -94,6 +94,8 @@
     }
   }
 
+  window.FPUB_getBusinessInfo = getBusinessInfo;
+
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     if (!form) return;

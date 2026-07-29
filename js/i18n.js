@@ -10,6 +10,7 @@
   const translations = {
     en: {
       nav: { work: "Work", services: "Services", process: "Process", agency: "Agency", cta: "Start Project" },
+      fab: { chatHeading: "Chat with us", chatAria: "Chat with us", formAria: "Jump to the contact form" },
       hero: {
         eyebrow: "Open 2024",
         title: "Engineering excellence<br>through <span class=\"italic-accent\">human-centric</span><br>design.",
@@ -105,6 +106,7 @@
 
     fr: {
       nav: { work: "Réalisations", services: "Services", process: "Process", agency: "Agence", cta: "Démarrer un projet" },
+      fab: { chatHeading: "Discuter avec nous", chatAria: "Discuter avec nous", formAria: "Aller directement au formulaire" },
       hero: {
         eyebrow: "Ouvert en 2024",
         title: "Une excellence d'ingénierie<br>au service d'un design <span class=\"italic-accent\">centré sur l'humain</span>.",
@@ -200,6 +202,7 @@
 
     ar: {
       nav: { work: "أعمالنا", services: "خدماتنا", process: "منهجيتنا", agency: "الوكالة", cta: "ابدأ مشروعك" },
+      fab: { chatHeading: "تواصل معنا", chatAria: "تواصل معنا", formAria: "الانتقال السريع لصفحة التسجيل" },
       hero: {
         eyebrow: "منذ 2024",
         title: "هندسة احترافية<br>لتصميم <span class=\"italic-accent\">محوره الإنسان</span>.",
@@ -314,6 +317,11 @@
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
       const val = getPath(dict, el.getAttribute('data-i18n-placeholder'));
       if (val !== undefined) el.setAttribute('placeholder', val);
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(function (el) {
+      const val = getPath(dict, el.getAttribute('data-i18n-aria-label'));
+      if (val !== undefined) el.setAttribute('aria-label', val);
     });
 
     const html = document.documentElement;
